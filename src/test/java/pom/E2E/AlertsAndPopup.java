@@ -1,4 +1,4 @@
-package pom.testCases;
+package pom.E2E;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;

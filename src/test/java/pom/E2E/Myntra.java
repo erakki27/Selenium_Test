@@ -1,4 +1,4 @@
-package pom.testCases;
+package pom.E2E;
 
 import java.util.Iterator;
 import java.util.Set;

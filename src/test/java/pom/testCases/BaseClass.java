@@ -47,7 +47,7 @@ public class BaseClass {
 		opt.addArguments("--disable-dev-shm-usage");
 		opt.addArguments("--headless");
 		//chrome binary location specified here
-		WebDriver driver = new ChromeDriver(opt);
+		 driver = new ChromeDriver(opt);
 		
 		 
 		    //original

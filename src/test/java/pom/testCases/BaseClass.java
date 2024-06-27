@@ -38,8 +38,15 @@ public class BaseClass {
 	@BeforeClass
 	public void setup() {
 		//System.setProperty("webdriver.chrome.driver",readconfig.getChromePath());
+		
+		// added
+		
+		ChromeOptions opt = new ChromeOptions();
+		opt.setBinary("C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe");  //chrome binary location specified here
+		WebDriver driver = new ChromeDriver(opt);
+		
 		 
-		    
+		    //original
 				driver = new ChromeDriver();
 				Logger = Logger.getLogger("Demo");
 				PropertyConfigurator.configure("log4j.properties");

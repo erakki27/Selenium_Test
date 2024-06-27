@@ -47,7 +47,7 @@ public class BaseClass {
 		
 		 
 		    //original
-				driver = new ChromeDriver();
+				//driver = new ChromeDriver();
 				Logger = Logger.getLogger("Demo");
 				PropertyConfigurator.configure("log4j.properties");
 		

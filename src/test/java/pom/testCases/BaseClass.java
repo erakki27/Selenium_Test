@@ -3,11 +3,15 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
 
 import org.testng.annotations.BeforeClass;
 
 import com.utilities.ReadConfig;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 import java.io.File;
 import java.io.IOException;
@@ -31,8 +35,14 @@ public class BaseClass {
 	@BeforeClass
 	public void setup() {
 		//System.setProperty("webdriver.chrome.driver",readconfig.getChromePath());
-		
-		driver = new ChromeDriver();
+		 ChromeOptions chromeOptions = new ChromeOptions();
+		 chromeOptions.setCapability("platformName", "Windows 10");
+		 
+		 chromeOptions.addArguments("--remote-allow-origins=*");
+		 
+		 WebDriverManager.chromedriver().setup();
+		    driver = new ChromeDriver();
+		    
 		
 		Logger = Logger.getLogger("Demo");
 		PropertyConfigurator.configure("log4j.properties");

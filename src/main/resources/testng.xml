@@ -7,6 +7,8 @@
   <test  name="Test Login">
     <classes>
       <class name="pom.testCases.TC_LoginTest_001"/>
+      <class name="pom.E2E.Myntra"/>
+      
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

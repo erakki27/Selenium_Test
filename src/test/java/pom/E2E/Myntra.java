@@ -9,10 +9,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.Test;
 
-public class Myntra {
-	public static void main(String[] args) throws InterruptedException {
-		WebDriver driver = new ChromeDriver();
+import pom.testCases.BaseClass;
+
+@Test
+public class Myntra extends BaseClass {
+	
+	public void  myntrasearch() throws InterruptedException {
 		
 		  driver.manage().window().maximize();
 		  
@@ -29,12 +33,12 @@ public class Myntra {
 		  
 		  //click on dresses
 		  
-		  driver.findElement(By.xpath("//a[contains(text(),'Dresses')]")).click();
+		  driver.findElement(By.xpath("//a[contains(text(),'Jumpsuits')]")).click();
 		  
 		  //select jumpsuit type
 		  
 		
-		 driver.findElement(By.xpath("//div[@class='vertical-filters-filters categories-container']/ul/li/label[contains(text(),'Jumpsuit')]")).click();
+		// driver.findElement(By.xpath("//div[@class='vertical-filters-filters categories-container']/ul/li/label[contains(text(),'Jumpsuit')]")).click();
 		  
 		  Thread.sleep(3000);
 		  

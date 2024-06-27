@@ -18,12 +18,12 @@ public class Myntra extends BaseClass {
 	
 	public void  myntrasearch() throws InterruptedException {
 		
-		  driver.manage().window().maximize();
+		  
 		  
 		  //open myntra website
 		  
-		  driver.get("https://www.myntra.com/");
-		  
+		  driver.get(MyntraUrl);
+		  Thread.sleep(3000);
 		  
 		//hover on women menu
 			 

@@ -3588,3 +3588,7 @@
 2024-06-27 19:07:18 DEBUG cache:45 – TemplateLoader.findTemplateSource("commons/commons-inject-js_en.ftl"): Not found
 2024-06-27 19:07:18 DEBUG cache:45 – TemplateLoader.findTemplateSource("commons/commons-inject-js.ftl"): Found
 2024-06-27 19:07:18 DEBUG cache:45 – Loading template for "commons/commons-inject-js.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/SnowTest/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/commons/commons-inject-js.ftl"
+2024-06-27 23:20:09 INFO  Demo:16 – Url is Openened
+2024-06-27 23:20:10 INFO  Demo:23 – UserName Passed
+2024-06-27 23:20:10 INFO  Demo:27 – Password Passed
+2024-06-27 23:20:11 INFO  Demo:33 – Test Passed

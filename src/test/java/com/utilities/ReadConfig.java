@@ -26,6 +26,11 @@ public class ReadConfig {
 		return URL;
 	}
 	
+	public String getApplicationUrl1() {
+		String URL1 = pro.getProperty("MyntraUrl");
+		return URL1;
+	}
+	
 	public String getUsername() {
 		String username = pro.getProperty("username");
 		return username;

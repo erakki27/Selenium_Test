@@ -32,6 +32,7 @@ public class BaseClass {
 	public String BaseUrl = readconfig.getApplicationUrl();
 	public String username = readconfig.getUsername();
 	public String password = readconfig.getPassword();
+	public String MyntraUrl = readconfig.getApplicationUrl1();
 	public static WebDriver driver;
 	public static Logger Logger;
 	
@@ -45,7 +46,7 @@ public class BaseClass {
 		//opt.setBinary("C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"); 
 		opt.addArguments("--no-sandbox");
 		opt.addArguments("--disable-dev-shm-usage");
-		opt.addArguments("--headless");
+		//opt.addArguments("--headless");
 		//chrome binary location specified here
 		 driver = new ChromeDriver(opt);
 		
@@ -56,7 +57,9 @@ public class BaseClass {
 				PropertyConfigurator.configure("log4j.properties");
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().window().maximize();
 		driver.get(BaseUrl);
+		driver.get(MyntraUrl);
 	}
 	
 	@AfterClass

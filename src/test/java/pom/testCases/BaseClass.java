@@ -42,7 +42,11 @@ public class BaseClass {
 		// added
 		
 		ChromeOptions opt = new ChromeOptions();
-		opt.setBinary("C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe");  //chrome binary location specified here
+		opt.setBinary("C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"); 
+		opt.addArguments("--no-sandbox");
+		opt.addArguments("--disable-dev-shm-usage");
+		opt.addArguments("--headless");
+		//chrome binary location specified here
 		WebDriver driver = new ChromeDriver(opt);
 		
 		 

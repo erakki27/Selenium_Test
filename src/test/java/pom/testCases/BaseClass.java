@@ -42,13 +42,20 @@ public class BaseClass {
 		
 		// added
 		
-		ChromeOptions opt = new ChromeOptions();
+		ChromeOptions options = new ChromeOptions();
 		//opt.setBinary("C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"); 
-		opt.addArguments("--no-sandbox");
-		opt.addArguments("--disable-dev-shm-usage");
-		//opt.addArguments("--headless");
+		 options.addArguments("--window-size=1920,1080");
+		    options.addArguments("--disable-extensions");
+		    options.addArguments("--proxy-server='direct://'");
+		    options.addArguments("--proxy-bypass-list=*");
+		    options.addArguments("--headless=new");
+		    options.addArguments("--lang=en_US");
+		    options.addArguments("--disable-gpu");
+		    options.addArguments("--disable-dev-shm-usage");
+		    options.addArguments("--no-sandbox");
+		    options.addArguments("--ignore-certificate-errors");
 		//chrome binary location specified here
-		 driver = new ChromeDriver(opt);
+		 driver = new ChromeDriver(options);
 		
 		 
 		    //original
@@ -56,10 +63,8 @@ public class BaseClass {
 				Logger = Logger.getLogger("Demo");
 				PropertyConfigurator.configure("log4j.properties");
 		
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.manage().window().maximize();
-		driver.get(BaseUrl);
-		driver.get(MyntraUrl);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(100));
+		//driver.get(BaseUrl);
 	}
 	
 	@AfterClass

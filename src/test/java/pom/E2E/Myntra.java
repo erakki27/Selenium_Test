@@ -1,5 +1,7 @@
 package pom.E2E;
 
+import java.io.IOException;
+import java.time.Duration;
 import java.util.Iterator;
 import java.util.Set;
 
@@ -9,6 +11,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import pom.testCases.BaseClass;
@@ -16,18 +20,23 @@ import pom.testCases.BaseClass;
 @Test
 public class Myntra extends BaseClass {
 	
-	public void  myntrasearch() throws InterruptedException {
+	public void  myntrasearch() throws InterruptedException, IOException {
 		
 		  
 		  
 		  //open myntra website
 		  
 		  driver.get(MyntraUrl);
+		  driver.navigate().refresh();
 		  Thread.sleep(3000);
+		  captureScreenshot(driver,"screenshot1");
+		  System.out.print(driver.getTitle());
+			Logger.info("Test Passed");
 		  
 		//hover on women menu
-			 
+		  //captureScreenshot(driver,"screenshot");
 			 WebElement hove = driver.findElement(By.xpath("//a[contains(text(),'Women')]"));
+			 captureScreenshot(driver,"screenshot1");
 			 Actions action = new Actions(driver);
 			 action.moveToElement(hove).build().perform();
 		  
